@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
 
 // icons component from @expo/vector
 import { Feather } from '@expo/vector-icons';
@@ -7,14 +7,15 @@ import { Feather } from '@expo/vector-icons';
 // expo libraries
 import * as Haptics from 'expo-haptics';
 
-// This function apply haptic feedback when the button is click
-const handleHapticFeedback = () => {
-    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-  };
+// Define the type for the props
+type ButtonProps = {
+  style?: ViewStyle;
+  onPress?: () => void;
+};
 
-export default function DeleteButton() {
+export default function DeleteButton({ style, onPress } : ButtonProps) {
   return (
-    <TouchableOpacity style={styles.calculatorButton} onPress={handleHapticFeedback}>
+    <TouchableOpacity style={styles.calculatorButton} onPress={onPress}>
       <Feather name="delete" size={35} color="#FFFFFF" />
     </TouchableOpacity>
   );

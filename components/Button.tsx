@@ -16,9 +16,9 @@ const handleHapticFeedback = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
   };
 
-export default function Button({ value, style }: ButtonProps) {
+export default function Button({ value, style, onPress }: ButtonProps) {
   return (
-    <TouchableOpacity style={styles.calculatorButton} onPress={handleHapticFeedback}>
+    <TouchableOpacity style={styles.calculatorButton} onPress={onPress}>
       <Text style={styles.calculatorButtonText}>{value}</Text>
     </TouchableOpacity>
   );
