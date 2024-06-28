@@ -12,7 +12,7 @@ const { width, height } = Dimensions.get('screen');
 const statusBarHeight = StatusBar.currentHeight;
 
 // initialize the result value
-const resultValue = '0000000000';
+const resultValue = '0000000000000';
 
 export default function Index() {
 
@@ -22,7 +22,7 @@ export default function Index() {
       {/* This is the calculator screen */}
       <View style={styles.displayScreen}>
         <Text style={styles.title}>SHAKEY</Text>
-        <Text style={[styles.result, { fontSize: resultValue.length > 10 ? 60 : 40 }]}>
+        <Text style={[styles.result, { fontSize: resultValue.length > 10 ? 40 : 60 }]}>
           {resultValue}
         </Text>
 
