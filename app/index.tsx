@@ -11,6 +11,9 @@ const { width, height } = Dimensions.get('screen');
 // Get the height of the status bar
 const statusBarHeight = StatusBar.currentHeight;
 
+// initialize the result value
+const resultValue = '0000000000';
+
 export default function Index() {
 
   return (
@@ -19,9 +22,10 @@ export default function Index() {
       {/* This is the calculator screen */}
       <View style={styles.displayScreen}>
         <Text style={styles.title}>SHAKEY</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.resultContainer}>
-          <Text style={styles.result}>0</Text>
-        </ScrollView>
+        <Text style={[styles.result, { fontSize: resultValue.length > 10 ? 60 : 40 }]}>
+          {resultValue}
+        </Text>
+
       </View>
 
       {/* This is the container for all the buttons */}
@@ -79,7 +83,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFC2B3',
     paddingTop: statusBarHeight, // Ensures content does not overlap with the status bar, accounting for devices with notches
     position: 'relative',
-    paddingBottom: 10
+    paddingBottom: 10,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end'
   },
   title: {
     color: '#FF8E71',
