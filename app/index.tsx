@@ -62,9 +62,9 @@ const screenTheme = [
 export default function Index() {
   const [resultValue, setResultValue] = useState('0');
   const [expression, setExpression] = useState('');
-  const [colors, setColors] = useState(screenTheme[0]);
+  const [colors, setColors] = useState(screenTheme[2]);
 
-  // this useeffect detect shake in screen
+  // this use effect detect shake in screen
   useEffect(() => {
     Accelerometer.setUpdateInterval(400);
     const subscription = Accelerometer.addListener(accelerometerData => {
@@ -87,6 +87,7 @@ export default function Index() {
     setColors(screenTheme[randomIndex]);
   };
 
+  // this function handles the button inputs
   const handleTap = (type: string, value?: string) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
