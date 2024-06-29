@@ -9,8 +9,12 @@ Welcome to the **SHAKEY Calculator App**! 🎉 This is not your ordinary calcula
 - **Clean UI**: Easy to use and visually pleasing 👀
 
 ## Screenshots 📸
-![Screenshot 1](https://github.com/MeetMuaz/shakey-calculator/blob/main/Screenshot_1719597366.png)
-![Screenshot 2](https://github.com/MeetMuaz/shakey-calculator/blob/main/Screenshot_1719632947.png)
+<p>
+  <img src="https://github.com/MeetMuaz/shakey-calculator/blob/main/Screenshot_1719597366.png" alt="Screenshot 1" height="300">
+  <img src="https://github.com/MeetMuaz/shakey-calculator/blob/main/Screenshot_1719632947.png" alt="Screenshot 2" height="300">
+</p>
+
+
 
 ## Installation 🛠️
 1. Clone the repo:
